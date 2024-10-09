@@ -16,4 +16,4 @@ Une application web simple pour générer des QR codes en fonction des URL saisi
 1. Clonez le dépôt sur votre machine locale :
 
 ```bash
-git clone https://github.com/bahAli21/QR-Code-Generator.git
+git clone https://github.com/mbah24-dev/QR-Code-Generator.git
