@@ -1,0 +1,219 @@
+:root{
+    --primary-color: #0ef;
+    --border-radius: 10px;
+    --secondary-color: #fff;
+    --border-color: #7fb7c9;
+
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color: #0ef;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body .container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg-color);
+}
+
+.container header{
+    background-color: var(--second-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    border-bottom: 1px solid var(--main-color);
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.container header div{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.container header div p{
+    margin: 20px;
+    color: #ffff;
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: underline;
+    backdrop-filter: blur(20px);
+}
+
+.container header img{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    border: .5px solid var(--main-color);
+    &:hover{
+        box-shadow: 0 0 10px var(--text-color);
+        transform: scale(1.01);
+    }
+}
+
+.container header a{
+    margin: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    color: #fff;
+    text-shadow: 0 0 14px var(--main-color);
+    &:hover{
+        transform: scale(1.001);
+        color: var(--main-color);
+
+
+    }
+
+}
+
+.box{
+    background-color: var(--second-bg-color);
+    padding: 30px;
+    width: 420px;
+    border-radius: var(--border-radius);
+}
+
+.qr-header h1{
+    font-size: 20px;
+    text-align: center;
+    color: var(--main-color);
+    margin-bottom: 24px;
+    text-transform: uppercase;
+}
+
+.qr-header input{
+    width: 100%;
+    margin-block: 10px;
+}
+
+.qr-header input {
+    padding: 8px;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    outline: none;
+    border: 2px solid var(--border-color);
+}
+
+.qr-footer{
+    display: flex;
+    justify-content: center;
+}
+
+.qr-footer a {
+    background-color: var(--main-color);
+    text-decoration: none;
+    font-size: 15px;
+    padding: 10px 30px;
+    margin-inline: 2px;
+    color: var(--text-color);
+    gap: 2rem;
+    font-weight: 300;
+    border-radius: var(--border-radius);
+
+    &:hover{
+        background-color: #fff;
+        color: #222222;
+        box-shadow: 0 0 10px #0ef,
+                    0 0 20px #0ef,
+                    0 0 30px #0ef;
+        transform: scale(1.02);
+    }
+}
+
+.qr-body{
+    display: flex;
+    place-items: center;
+    padding: 18px;
+}
+
+.qr-body img{
+    max-width: 100%;
+    max-height: 100%;
+    margin-block: 8px;
+    padding: 20px;
+    border: 0.5px solid var(--border-color) ;
+    border-radius: var(--border-radius);
+}
+
+footer{
+    z-index: 100;
+    background-color: var(--second-bg-color);
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+
+    border-top: 1px solid var(--main-color);
+    border-top-right-radius: 40px;
+    border-top-left-radius: 40px;
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+footer  spa {
+    display: flex;
+    text-align: center;
+
+    font-weight: bold;
+    font-size: 20px;
+    color: #fff;
+}
+
+@media screen and (max-width: 520px) {
+    .box{
+        width: 80%;
+    }
+
+    .qr-footer a {
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .box{
+        width: 80%;
+    }
+
+    .qr-footer a {
+        padding: 12px;
+        font-size: 15px;
+    }
+
+    .container header div p, .container header div a{
+        margin: 5px;
+    }
+
+    .container header div a{
+        font-size: 8px;
+    }
+
+    .container header div img{
+        width: 20px;
+        height: 20px;
+    }
+}
